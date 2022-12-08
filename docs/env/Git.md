@@ -236,7 +236,7 @@ git merge dev
 
 ## 问题解决
 
-### error: remote unpack failed: error Missing tree
+#### error: remote unpack failed: error Missing tree
 
 问题：本地新建的分支无法推送至远程
 
@@ -245,19 +245,29 @@ git merge dev
 解决方法：1. 切换为主分支 -> 2. pull -> 3. 切换分支 -> 4. push
 
 ```bash
-// 1. 切换到主分支（此时分支 A）
+# 1. 切换到主分支（此时分支 A）
 git checkout master
 
-// 2. pull
+# 2. pull
 git pull
 
-// 3. 切换到次分支
+# 3. 切换到次分支
 git checkout A
 
-// 4. push
+# 4. push
 git push origin A
 ```
 
+#### OpenSSL SSL_read: Connection was reset, errno 10054
+
+`git push`时报错`fatal: unable to access 'https://github.com/xxxxx/xxxxx/': OpenSSL SSL_read: Connection was reset, errno 10054`
+
+原因：网络环境差，可通过配置代理解决
+
+```bash
+# 端口以具体代理配置端口为准
+git config https.proxy https://127.0.0.1:1080
+```
 
 
 
