@@ -6,6 +6,14 @@ export default sidebar([
   "/Fitness",
   "/Read",
   {
+    text: "开发环境",
+    icon: "",
+    prefix: "/env/",
+    link: "",
+    collapsible: true,
+    children: "structure"
+  },
+  {
     text: "🚀 代码",
     icon: "",
     prefix: "/code/",
