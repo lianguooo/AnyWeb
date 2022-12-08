@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>遇到问题，解决问题，提出问题</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 08 Dec 2022 16:09:03 GMT</pubDate>
-    <lastBuildDate>Thu, 08 Dec 2022 16:09:03 GMT</lastBuildDate>
+    <pubDate>Thu, 08 Dec 2022 16:18:33 GMT</pubDate>
+    <lastBuildDate>Thu, 08 Dec 2022 16:18:33 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -173,22 +173,27 @@ q
 <h4 id="停止追踪已提交文件" tabindex="-1"> 停止追踪已提交文件</h4>
 <div data-ext="sh"><pre><code> <span>git</span> <span>rm</span> <span>-r</span> <span>--cached</span> src/main/resources/application-dev.yml
 </code></pre><div aria-hidden="true"><div></div></div></div><h2 id="问题解决" tabindex="-1"> 问题解决</h2>
-<h3 id="error-remote-unpack-failed-error-missing-tree" tabindex="-1"> error: remote unpack failed: error Missing tree</h3>
+<h4 id="error-remote-unpack-failed-error-missing-tree" tabindex="-1"> error: remote unpack failed: error Missing tree</h4>
 <p>问题：本地新建的分支无法推送至远程</p>
 <p>原因：本地分支建立后，未立即推送至远程，期间远程状态信息已被修改</p>
 <p>解决方法：1. 切换为主分支 -&gt; 2. pull -&gt; 3. 切换分支 -&gt; 4. push</p>
-<div data-ext="sh"><pre><code>// <span>1</span>. 切换到主分支（此时分支 A）
+<div data-ext="sh"><pre><code><span># 1. 切换到主分支（此时分支 A）</span>
 <span>git</span> checkout master
 
-// <span>2</span>. pull
+<span># 2. pull</span>
 <span>git</span> pull
 
-// <span>3</span>. 切换到次分支
+<span># 3. 切换到次分支</span>
 <span>git</span> checkout A
 
-// <span>4</span>. push
+<span># 4. push</span>
 <span>git</span> push origin A
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>撤销修改</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h4 id="openssl-ssl-read-connection-was-reset-errno-10054" tabindex="-1"> OpenSSL SSL_read: Connection was reset, errno 10054</h4>
+<p><code>git push</code>时报错<code>fatal: unable to access 'https://github.com/xxxxx/xxxxx/': OpenSSL SSL_read: Connection was reset, errno 10054</code></p>
+<p>原因：网络环境差，可通过配置代理解决</p>
+<div data-ext="sh"><pre><code><span># 端口以具体代理配置端口为准</span>
+<span>git</span> config https.proxy https://127.0.0.1:1080
+</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>撤销修改</p>
 <div data-ext="text"><pre><code>// 单一文件（需要进入到文件目录）
 git checkout -- [文件名]
 
