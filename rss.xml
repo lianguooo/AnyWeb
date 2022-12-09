@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>遇到问题，解决问题，提出问题</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 08 Dec 2022 16:18:33 GMT</pubDate>
-    <lastBuildDate>Thu, 08 Dec 2022 16:18:33 GMT</lastBuildDate>
+    <pubDate>Fri, 09 Dec 2022 02:18:13 GMT</pubDate>
+    <lastBuildDate>Fri, 09 Dec 2022 02:18:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -193,13 +193,7 @@ q
 <p>原因：网络环境差，可通过配置代理解决</p>
 <div data-ext="sh"><pre><code><span># 端口以具体代理配置端口为准</span>
 <span>git</span> config https.proxy https://127.0.0.1:1080
-</code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>撤销修改</p>
-<div data-ext="text"><pre><code>// 单一文件（需要进入到文件目录）
-git checkout -- [文件名]
-
-// 所有文件
-git checkout -- file
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div>]]></content:encoded>
+</code></pre><div aria-hidden="true"><div></div><div></div></div></div>]]></content:encoded>
       <enclosure url="https://lianguooo-typora.oss-cn-shanghai.aliyuncs.com/image-20210110111321903.png" type="image/png"/>
     </item>
     <item>
